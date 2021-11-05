@@ -23,9 +23,16 @@ const App = () => {
     createBoard();
   }, []);
 
+  console.log(currentColorArrangement);
+
   return (
-    <div className="App">
-      <h1>hello</h1>
+    <div className="app">
+      <h1>Candy Crush</h1>
+      <div className="game">
+        {currentColorArrangement.map((candyColor, index) => (
+          <img key={index} style={{ backgroundColor: candyColor }} />
+        ))}
+      </div>
     </div>
   );
 };
